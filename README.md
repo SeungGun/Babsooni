@@ -2,7 +2,7 @@
 
 outsourced flutter project
 
-> management system of users with orders using database
+>  mobile application for management system of users with orders using database
 
 - used plugins
 1. sqflite
