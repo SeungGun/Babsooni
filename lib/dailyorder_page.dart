@@ -90,7 +90,7 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                   children: [
                     Padding(padding: EdgeInsets.only(left: size.width * 0.03)),
                     Container(
-                      width: 80,
+                      width: size.width * 0.2,
                       height: 60,
                       alignment: Alignment.center,
                       child: Text('주문일자'),
@@ -101,26 +101,25 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                       padding: EdgeInsets.only(left: size.width * 0.015),
                     ),
                     Container(
-                        width: 150,
+                        width: size.width * 0.35,
                         height: 60,
                         alignment: Alignment.center,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Container(
-                              width: 100,
+                              width: size.width * 0.4 * 0.6,
                               height: 60,
                               alignment: Alignment.center,
                               child: Text(_selectedDate.trim()),
                             ),
                             Container(
-                              width: 30,
+                              width: size.width * 0.4 * 0.2,
                               height: 70,
                               child: IconButton(
                                   color: Colors.blue,
                                   icon: Icon(
                                     Icons.arrow_drop_down,
-                                    size: 43,
                                   ),
                                   onPressed: () {
                                     Future<DateTime> selectedDate =
@@ -156,10 +155,10 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                         decoration: BoxDecoration(
                             border: Border.all(width: 2, color: Colors.cyan))),
                     Padding(
-                      padding: EdgeInsets.only(left: size.width * 0.03),
+                      padding: EdgeInsets.only(left: size.width * 0.02),
                     ),
                     Container(
-                        width: 80,
+                        width: size.width * 0.2 ,
                         height: 60,
                         alignment: Alignment.center,
                         child: Text('잔여횟수'),
@@ -169,7 +168,7 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                       padding: EdgeInsets.only(left: size.width * 0.015),
                     ),
                     Container(
-                        width: 60,
+                        width: size.width * 0.15,
                         height: 60,
                         alignment: Alignment.center,
                         child: Text(
@@ -189,7 +188,7 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                   children: [
                     Padding(padding: EdgeInsets.only(left: size.width * 0.03)),
                     Container(
-                      width: 80,
+                      width: size.width * 0.2,
                       height: 60,
                       alignment: Alignment.center,
                       child: Text('입금자'),
@@ -200,7 +199,7 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                       padding: EdgeInsets.only(left: size.width * 0.015),
                     ),
                     Container(
-                        width: 130,
+                        width: size.width * 0.35,
                         height: 60,
                         alignment: Alignment.center,
                         child: Row(
@@ -208,7 +207,7 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                           children: [
                             Padding(padding: EdgeInsets.only(left: 5)),
                             Container(
-                              width: 80,
+                              width: size.width * 0.4 * 0.5,
                               height: 60,
                               alignment: Alignment.bottomCenter,
                               padding: EdgeInsets.only(bottom: 3),
@@ -218,7 +217,7 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                               ),
                             ),
                             Container(
-                                width: 35,
+                                width: size.width * 0.4 * 0.2,
                                 height: 35,
                                 alignment: Alignment.centerLeft,
                                 child: IconButton(
@@ -237,16 +236,16 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                                 decoration: BoxDecoration(
                                     border: Border.all(
                                         width: 1, color: Colors.cyan))),
-                            Padding(padding: EdgeInsets.only(right: 5))
+                            Padding(padding: EdgeInsets.only(right: 3))
                           ],
                         ),
                         decoration: BoxDecoration(
                             border: Border.all(width: 2, color: Colors.cyan))),
                     Padding(
-                      padding: EdgeInsets.only(left: size.width * 0.025),
+                      padding: EdgeInsets.only(left: size.width * 0.02),
                     ),
                     Container(
-                        width: 80,
+                        width: size.width * 0.2,
                         height: 60,
                         alignment: Alignment.center,
                         child: Text('고객번호'),
@@ -256,7 +255,7 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                       padding: EdgeInsets.only(left: size.width * 0.015),
                     ),
                     Container(
-                        width: 80,
+                        width: size.width * 0.16,
                         height: 60,
                         alignment: Alignment.center,
                         child: Text(initial_id),
@@ -270,7 +269,7 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                   children: [
                     Padding(padding: EdgeInsets.only(left: size.width * 0.03)),
                     Container(
-                      width: 80,
+                      width: size.width * 0.2,
                       height: 60,
                       alignment: Alignment.center,
                       child: Text('전화번호'),
@@ -279,7 +278,7 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                     ),
                     Padding(padding: EdgeInsets.only(left: size.width * 0.015)),
                     Container(
-                        width: 130,
+                        width: size.width * 0.35,
                         height: 60,
                         alignment: Alignment.center,
                         child: Row(
@@ -289,7 +288,7 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                             Container(
                                 alignment: Alignment.bottomCenter,
                                 padding: EdgeInsets.only(bottom: 3),
-                                width: 80,
+                                width: size.width * 0.4 * 0.5,
                                 height: 60,
                                 child: TextField(
                                   controller: _phoneStream,
@@ -298,7 +297,7 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                                   minLines: 1,
                                 )),
                             Container(
-                                width: 35,
+                                width: size.width * 0.4 * 0.2,
                                 height: 35,
                                 alignment: Alignment.centerLeft,
                                 child: IconButton(
@@ -317,14 +316,14 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                                 decoration: BoxDecoration(
                                     border: Border.all(
                                         width: 1, color: Colors.cyan))),
-                            Padding(padding: EdgeInsets.only(right: 5))
+                            Padding(padding: EdgeInsets.only(right: 3))
                           ],
                         ),
                         decoration: BoxDecoration(
                             border: Border.all(width: 2, color: Colors.cyan))),
-                    Padding(padding: EdgeInsets.only(left: size.width * 0.025)),
+                    Padding(padding: EdgeInsets.only(left: size.width * 0.02)),
                     Container(
-                        width: 60,
+                        width: size.width * 0.15,
                         height: 60,
                         alignment: Alignment.center,
                         child: Text('카톡'),
@@ -332,13 +331,13 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                             border: Border.all(width: 2, color: Colors.cyan))),
                     Padding(padding: EdgeInsets.only(left: size.width * 0.015)),
                     Container(
-                        width: 100,
+                        width: size.width * 0.212,
                         height: 60,
                         alignment: Alignment.center,
                         child: Row(
                           children: [
                             Container(
-                              width: 60,
+                              width: size.width * 0.2 * 0.67,
                               height: 60,
                               child: TextField(
                                 controller: _kakaoStream,
@@ -346,7 +345,7 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                               ),
                             ),
                             Container(
-                                width: 30,
+                                width: size.width * 0.2 * 0.3,
                                 height: 30,
                                 padding: EdgeInsets.only(bottom: 10),
                                 child: IconButton(
@@ -379,7 +378,7 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                   children: [
                     Padding(padding: EdgeInsets.only(left: size.width * 0.03)),
                     Container(
-                        width: 85,
+                        width: size.width * 0.2,
                         height: 85,
                         alignment: Alignment.center,
                         child: Text('배송주소'),
@@ -389,7 +388,7 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                     Row(
                       children: [
                         Container(
-                            width: 260,
+                            width: size.width * 0.65,
                             height: 85,
                             alignment: Alignment.center,
                             child: TextFormField(
@@ -402,7 +401,7 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                                 border:
                                     Border.all(width: 2, color: Colors.cyan))),
                         Container(
-                            width: 40,
+                            width: size.width * 0.1,
                             height: 85,
                             alignment: Alignment.centerLeft,
                             child: IconButton(
@@ -429,7 +428,7 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                   children: [
                     Padding(padding: EdgeInsets.only(left: size.width * 0.03)),
                     Container(
-                      width: 80,
+                      width: size.width * 0.2,
                       height: 60,
                       alignment: Alignment.center,
                       child: Text('현관비번'),
@@ -438,15 +437,15 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                     ),
                     Padding(padding: EdgeInsets.only(left: size.width * 0.015)),
                     Container(
-                        width: 100,
+                        width: size.width * 0.25,
                         height: 60,
                         alignment: Alignment.center,
                         child: Text(initial_password),
                         decoration: BoxDecoration(
                             border: Border.all(width: 2, color: Colors.cyan))),
-                    Padding(padding: EdgeInsets.only(left: size.width * 0.03)),
+                    Padding(padding: EdgeInsets.only(left: size.width * 0.02)),
                     Container(
-                        width: 70,
+                        width: size.width * 0.2,
                         height: 60,
                         alignment: Alignment.center,
                         child: Text('비고'),
@@ -454,7 +453,7 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                             border: Border.all(width: 2, color: Colors.cyan))),
                     Padding(padding: EdgeInsets.only(left: size.width * 0.015)),
                     Container(
-                        width: 120,
+                        width: size.width * 0.26,
                         height: 60,
                         alignment: Alignment.center,
                         child: Text(initial_remark),
@@ -473,7 +472,7 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                   children: [
                     Padding(padding: EdgeInsets.only(left: size.width * 0.03)),
                     Container(
-                      width: 80,
+                      width: size.width * 0.2,
                       height: 60,
                       alignment: Alignment.center,
                       child: Text('주문내역'),
@@ -482,7 +481,7 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                     ),
                     Padding(padding: EdgeInsets.only(left: size.width * 0.015)),
                     Container(
-                      width: 300,
+                      width: size.width * 0.73,
                       height: 115,
                       alignment: Alignment.bottomCenter,
                       padding: EdgeInsets.only(bottom: 5),
@@ -502,7 +501,7 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                   children: [
                     Padding(padding: EdgeInsets.only(left: size.width * 0.03)),
                     Container(
-                      width: 80,
+                      width: size.width * 0.2,
                       height: 60,
                       alignment: Alignment.center,
                       child: Text('선결제'),
@@ -531,7 +530,7 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                     Text('무'),
                     Padding(padding: EdgeInsets.only(left: size.width * 0.03)),
                     Container(
-                        width: 70,
+                        width: size.width * 0.15,
                         height: 60,
                         alignment: Alignment.center,
                         child: Text('횟수'),
@@ -539,7 +538,7 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                             border: Border.all(width: 2, color: Colors.cyan))),
                     Padding(padding: EdgeInsets.only(left: size.width * 0.015)),
                     Container(
-                        width: 80,
+                        width: size.width * 0.22,
                         height: 60,
                         padding: EdgeInsets.symmetric(horizontal: 10),
                         alignment: Alignment.center,
@@ -569,14 +568,14 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                   ],
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 15),
+                  padding: EdgeInsets.only(top: 10),
                 ),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(padding: EdgeInsets.only(left: size.width * 0.03)),
                     Container(
-                      width: 80,
+                      width: size.width * 0.2,
                       height: 60,
                       alignment: Alignment.center,
                       child: Text('배달 시간'),
@@ -585,7 +584,7 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                     ),
                     Padding(padding: EdgeInsets.only(left: size.width * 0.015)),
                     Container(
-                      width: 275,
+                      width: size.width * 0.73,
                       height: 60,
                       alignment: Alignment.center,
                       child: DropdownButton(
@@ -610,7 +609,7 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                     ),
                   ],
                 ),
-                Padding(padding: EdgeInsets.symmetric(vertical: 10)),
+                Padding(padding: EdgeInsets.symmetric(vertical: 7)),
 
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
