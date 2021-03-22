@@ -111,7 +111,10 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                               width: size.width * 0.4 * 0.6,
                               height: 60,
                               alignment: Alignment.center,
-                              child: Text(_selectedDate.trim()),
+                              child: Text(
+                                _selectedDate.trim(),
+                                style: TextStyle(fontSize: 14),
+                              ),
                             ),
                             Container(
                               width: size.width * 0.4 * 0.2,
@@ -158,7 +161,7 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                       padding: EdgeInsets.only(left: size.width * 0.02),
                     ),
                     Container(
-                        width: size.width * 0.2 ,
+                        width: size.width * 0.2,
                         height: 60,
                         alignment: Alignment.center,
                         child: Text('잔여횟수'),
@@ -172,7 +175,8 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                         height: 60,
                         alignment: Alignment.center,
                         child: Text(
-                            initial_remain < 0 ? '-회' : '$initial_remain회'),
+                            initial_remain < 0 ? '-회' : '$initial_remain회',
+                            style: TextStyle(fontSize: 14)),
                         decoration: BoxDecoration(
                             border: Border.all(width: 2, color: Colors.cyan))),
                   ],

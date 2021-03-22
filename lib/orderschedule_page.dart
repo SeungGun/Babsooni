@@ -149,6 +149,7 @@ class _CheckOrderScheduleState extends State<CheckOrderSchedule>
   void readDBDate() {}
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
         body: Column(
@@ -163,7 +164,22 @@ class _CheckOrderScheduleState extends State<CheckOrderSchedule>
               ),
             ),
             _buildTableCalendarWithBuilders(),
-            const SizedBox(height: 8.0),
+            const SizedBox(height: 50.0),
+            FlatButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Container(
+                  width: size.width * 0.4,
+                  height: 60,
+                  alignment: Alignment.center,
+                  child: Text(
+                    '이전',
+                    textScaleFactor: 1.4,
+                  ),
+                  decoration: BoxDecoration(
+                      border: Border.all(width: 2, color: Colors.cyan)),
+                )),
           ],
         ),
       ),
@@ -222,7 +238,7 @@ class _CheckOrderScheduleState extends State<CheckOrderSchedule>
       builders: CalendarBuilders(
         dayBuilder: (context, date, _) {
           return Container(
-            margin: const EdgeInsets.all(4.0),
+            margin: const EdgeInsets.all(0.5),
             padding: const EdgeInsets.only(top: 10.0, left: 1.0),
             width: 100,
             height: 100,
@@ -237,7 +253,7 @@ class _CheckOrderScheduleState extends State<CheckOrderSchedule>
                   style: TextStyle().copyWith(fontSize: 14.0),
                 ),
                 Text(
-                  getShortAddress(date.month,date.day),
+                  getShortAddress(date.month, date.day),
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(fontSize: 8),
                 )
@@ -249,8 +265,8 @@ class _CheckOrderScheduleState extends State<CheckOrderSchedule>
           return FadeTransition(
             opacity: Tween(begin: 0.0, end: 1.0).animate(_animationController),
             child: Container(
-              margin: const EdgeInsets.all(4.0),
-              padding: const EdgeInsets.only(top: 5.0, left: 6.0),
+              margin: const EdgeInsets.all(0.5),
+              padding: const EdgeInsets.only(top: 10.0, left: 1.0),
               color: Colors.deepOrange[300],
               width: 100,
               height: 100,
@@ -261,7 +277,7 @@ class _CheckOrderScheduleState extends State<CheckOrderSchedule>
                     style: TextStyle().copyWith(fontSize: 14.0),
                   ),
                   Text(
-                    getShortAddress(date.month,date.day),
+                    getShortAddress(date.month, date.day),
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(fontSize: 8),
                   )
@@ -272,8 +288,8 @@ class _CheckOrderScheduleState extends State<CheckOrderSchedule>
         },
         todayDayBuilder: (context, date, _) {
           return Container(
-            margin: const EdgeInsets.all(4.0),
-            padding: const EdgeInsets.only(top: 5.0, left: 6.0),
+            margin: const EdgeInsets.all(0.5),
+            padding: const EdgeInsets.only(top: 10.0, left: 1.0),
             color: Colors.amber[400],
             width: 100,
             height: 100,
@@ -284,7 +300,7 @@ class _CheckOrderScheduleState extends State<CheckOrderSchedule>
                   style: TextStyle().copyWith(fontSize: 14.0),
                 ),
                 Text(
-                  getShortAddress(date.month,date.day),
+                  getShortAddress(date.month, date.day),
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(fontSize: 8),
                 )
@@ -363,7 +379,8 @@ class _CheckOrderScheduleState extends State<CheckOrderSchedule>
     try {
       for (int i = 0; i < queryDate.length; ++i) {
         if (count == 3) return m;
-        if (day == getExtractDay(queryDate[i]['date']) && month == getExtractMonth(queryDate[i]['date'])) {
+        if (day == getExtractDay(queryDate[i]['date']) &&
+            month == getExtractMonth(queryDate[i]['date'])) {
           m += queryResult[i][0]['address'].toString().split(' ')[3] +
               ' ' +
               queryResult[i][0]['address'].toString().split(' ')[4];

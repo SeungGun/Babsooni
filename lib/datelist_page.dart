@@ -59,49 +59,56 @@ class _CurrentDateListPageState extends State<CurrentDateListPage> {
       Container(
         color: Colors.cyanAccent,
         child: Padding(
-          padding: const EdgeInsets.only(left:10,top:15,bottom:15,right:10),
+          padding:
+              const EdgeInsets.only(left: 10, top: 15, bottom: 15, right: 10),
           child: Text('No.'),
         ),
       ),
       Container(
         color: Colors.cyanAccent,
         child: Padding(
-          padding: const EdgeInsets.only(left:10,top:15,bottom:15,right:10),
+          padding:
+              const EdgeInsets.only(left: 10, top: 15, bottom: 15, right: 10),
           child: Text('입금자'),
         ),
       ),
       Container(
         color: Colors.cyanAccent,
         child: Padding(
-          padding: const EdgeInsets.only(left:10,top:15,bottom:15,right:10),
+          padding:
+              const EdgeInsets.only(left: 10, top: 15, bottom: 15, right: 10),
           child: Text('카톡'),
         ),
       ),
       Container(
         color: Colors.cyanAccent,
         child: Padding(
-          padding: const EdgeInsets.only(left:10,top:15,bottom:15,right:10),
+          padding:
+              const EdgeInsets.only(left: 10, top: 15, bottom: 15, right: 10),
           child: Text('배달주소'),
         ),
       ),
       Container(
         color: Colors.cyanAccent,
         child: Padding(
-          padding: const EdgeInsets.only(left:10,top:15,bottom:15,right:10),
+          padding:
+              const EdgeInsets.only(left: 10, top: 15, bottom: 15, right: 10),
           child: Text('주문내역'),
         ),
       ),
       Container(
         color: Colors.cyanAccent,
         child: Padding(
-          padding: const EdgeInsets.only(left:10,top:15,bottom:15,right:10),
+          padding:
+              const EdgeInsets.only(left: 10, top: 15, bottom: 15, right: 10),
           child: Text('현관비번'),
         ),
       ),
       Container(
         color: Colors.cyanAccent,
         child: Padding(
-          padding: const EdgeInsets.only(left:10,top:15,bottom:15,right:10),
+          padding:
+              const EdgeInsets.only(left: 10, top: 15, bottom: 15, right: 10),
           child: Text('비고'),
         ),
       )
@@ -114,31 +121,38 @@ class _CurrentDateListPageState extends State<CurrentDateListPage> {
       menuList.add(query[i]['content'].toString());
       dataList.add(TableRow(children: [
         Padding(
-          padding: const EdgeInsets.only(left:10,top:15,bottom:15,right:10),
+          padding:
+              const EdgeInsets.only(left: 10, top: 15, bottom: 15, right: 10),
           child: Text((i + 1).toString()),
         ),
         Padding(
-          padding: const EdgeInsets.only(left:10,top:15,bottom:15,right:10),
+          padding:
+              const EdgeInsets.only(left: 10, top: 15, bottom: 15, right: 10),
           child: Text(queryResult[i][0]['name'].toString()),
         ),
         Padding(
-          padding: const EdgeInsets.only(left:10,top:15,bottom:15,right:10),
+          padding:
+              const EdgeInsets.only(left: 10, top: 15, bottom: 15, right: 10),
           child: Text(queryResult[i][0]['kakao'].toString()),
         ),
         Padding(
-          padding: const EdgeInsets.only(left:10,top:15,bottom:15,right:10),
+          padding:
+              const EdgeInsets.only(left: 10, top: 15, bottom: 15, right: 10),
           child: Text(queryResult[i][0]['address'].toString()),
         ),
         Padding(
-          padding: const EdgeInsets.only(left:10,top:15,bottom:15,right:10),
+          padding:
+              const EdgeInsets.only(left: 10, top: 15, bottom: 15, right: 10),
           child: Text(query[i]['content'].toString()),
         ),
         Padding(
-          padding: const EdgeInsets.only(left:10,top:15,bottom:15,right:10),
+          padding:
+              const EdgeInsets.only(left: 10, top: 15, bottom: 15, right: 10),
           child: Text(queryResult[i][0]['password'].toString()),
         ),
         Padding(
-          padding: const EdgeInsets.only(left:10,top:15,bottom:15,right:10),
+          padding:
+              const EdgeInsets.only(left: 10, top: 15, bottom: 15, right: 10),
           child: Text(queryResult[i][0]['remark'].toString()),
         )
       ]));
@@ -191,11 +205,14 @@ class _CurrentDateListPageState extends State<CurrentDateListPage> {
                 Padding(
                   padding: EdgeInsets.symmetric(vertical: 15),
                 ),
-                Table(
-                  children: titleContainList,
-                  defaultColumnWidth: IntrinsicColumnWidth(),
-                  defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-                  border: TableBorder.all(color: Colors.cyan, width: 3),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Table(
+                    children: titleContainList,
+                    defaultColumnWidth: IntrinsicColumnWidth(),
+                    defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+                    border: TableBorder.all(color: Colors.cyan, width: 3),
+                  ),
                 ),
                 Padding(padding: EdgeInsets.symmetric(vertical: 10)),
                 Row(children: [
@@ -390,7 +407,9 @@ class _CurrentDateListPageState extends State<CurrentDateListPage> {
                   left: j == 5 ? 3 : 5, top: 10, right: 5, bottom: 13)));
         }
       }
-      var a = pw.TableRow(children: row,);
+      var a = pw.TableRow(
+        children: row,
+      );
       list.add(a);
     }
     return list;

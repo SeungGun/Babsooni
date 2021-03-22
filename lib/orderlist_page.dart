@@ -81,7 +81,7 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
           children: [
             Padding(padding: EdgeInsets.only(left: size.width * 0.015)),
             Container(
-                width: 80,
+                width: size.width * 0.2,
                 height: 60,
                 alignment: Alignment.center,
                 child: Text('입금자'),
@@ -91,7 +91,7 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
               padding: EdgeInsets.only(left: size.width * 0.015),
             ),
             Container(
-                width: 130,
+                width: size.width * 0.36,
                 height: 60,
                 alignment: Alignment.center,
                 child: Row(
@@ -99,7 +99,7 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
                   children: [
                     Padding(padding: EdgeInsets.only(left: 5)),
                     Container(
-                      width: 80,
+                      width: size.width * 0.4 * 0.6,
                       height: 60,
                       alignment: Alignment.bottomCenter,
                       padding: EdgeInsets.only(bottom: 3),
@@ -109,7 +109,7 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
                       ),
                     ),
                     Container(
-                        width: 35,
+                        width: size.width * 0.4 * 0.2,
                         height: 35,
                         alignment: Alignment.centerLeft,
                         child: IconButton(
@@ -127,16 +127,16 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
                             }),
                         decoration: BoxDecoration(
                             border: Border.all(width: 1, color: Colors.cyan))),
-                    Padding(padding: EdgeInsets.only(right: 5))
+                    Padding(padding: EdgeInsets.only(right: 3))
                   ],
                 ),
                 decoration: BoxDecoration(
                     border: Border.all(width: 2, color: Colors.cyan))),
             Padding(
-              padding: EdgeInsets.only(left: size.width * 0.03),
+              padding: EdgeInsets.only(left: size.width * 0.015),
             ),
             Container(
-                width: 80,
+                width: size.width * 0.2,
                 height: 60,
                 alignment: Alignment.center,
                 child: Text('고객번호'),
@@ -146,7 +146,7 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
               padding: EdgeInsets.only(left: size.width * 0.015),
             ),
             Container(
-                width: 80,
+                width: size.width * 0.17,
                 height: 60,
                 alignment: Alignment.center,
                 child: Text(user_id),
@@ -161,7 +161,7 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
           children: [
             Padding(padding: EdgeInsets.only(left: size.width * 0.015)),
             Container(
-                width: 80,
+                width: size.width * 0.2,
                 height: 70,
                 alignment: Alignment.center,
                 child: Text('전화번호'),
@@ -171,7 +171,7 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
               padding: EdgeInsets.only(left: size.width * 0.015),
             ),
             Container(
-                width: 130,
+                width: size.width * 0.35,
                 height: 70,
                 alignment: Alignment.center,
                 child: Row(
@@ -179,7 +179,7 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
                   children: [
                     Padding(padding: EdgeInsets.only(left: 5)),
                     Container(
-                      width: 80,
+                      width: size.width * 0.4 * 0.6,
                       height: 60,
                       alignment: Alignment.bottomCenter,
                       padding: EdgeInsets.only(bottom: 3),
@@ -191,7 +191,7 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
                       ),
                     ),
                     Container(
-                        width: 35,
+                        width: size.width * 0.4 * 0.2,
                         height: 35,
                         alignment: Alignment.centerLeft,
                         child: IconButton(
@@ -209,7 +209,7 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
                             }),
                         decoration: BoxDecoration(
                             border: Border.all(width: 1, color: Colors.cyan))),
-                    Padding(padding: EdgeInsets.only(right: 5))
+                    Padding(padding: EdgeInsets.only(right: 3))
                   ],
                 ),
                 decoration: BoxDecoration(
@@ -218,7 +218,7 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
               padding: EdgeInsets.only(left: size.width * 0.015),
             ),
             Container(
-                width: 60,
+                width: size.width * 0.14,
                 height: 70,
                 alignment: Alignment.center,
                 child: Text('카톡'),
@@ -228,7 +228,7 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
               padding: EdgeInsets.only(left: size.width * 0.01),
             ),
             Container(
-                width: 110,
+                width: size.width * 0.24,
                 height: 70,
                 alignment: Alignment.center,
                 child: Container(
@@ -239,7 +239,7 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
                     children: [
                       Padding(padding: EdgeInsets.only(left: 5)),
                       Container(
-                        width: 60,
+                        width: size.width * 0.2 * 0.67,
                         height: 60,
                         alignment: Alignment.bottomCenter,
                         padding: EdgeInsets.only(bottom: 3),
@@ -251,7 +251,7 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
                         ),
                       ),
                       Container(
-                          width: 30,
+                          width: size.width * 0.2 * 0.3,
                           height: 30,
                           alignment: Alignment.centerLeft,
                           child: IconButton(
@@ -285,7 +285,7 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
           children: [
             Padding(padding: EdgeInsets.only(left: size.width * 0.015)),
             Container(
-                width: 85,
+                width: size.width * 0.2,
                 height: 85,
                 alignment: Alignment.center,
                 child: Text('배송주소'),
@@ -295,7 +295,7 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
             Row(
               children: [
                 Container(
-                    width: 265,
+                    width: size.width * 0.65,
                     height: 85,
                     alignment: Alignment.center,
                     child: TextFormField(
@@ -307,12 +307,11 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
                     decoration: BoxDecoration(
                         border: Border.all(width: 2, color: Colors.cyan))),
                 Container(
-                    width: 40,
+                    width: size.width * 0.1,
                     height: 85,
                     alignment: Alignment.centerLeft,
                     child: IconButton(
                       onPressed: () async {
-
                         dataList.clear();
                         List<Map> list = await databaseUser.rawQuery(
                             'SELECT * FROM user_info WHERE address = ?',
@@ -340,7 +339,7 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
           children: [
             Padding(padding: EdgeInsets.only(left: size.width * 0.015)),
             Container(
-                width: 80,
+                width: size.width * 0.2,
                 height: 60,
                 alignment: Alignment.center,
                 child: Text('주문 내역'),
@@ -401,7 +400,7 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
               padding: EdgeInsets.only(left: size.width * 0.015),
             ),
             Container(
-                width: 80,
+                width: size.width * 0.2,
                 height: 50,
                 alignment: Alignment.center,
                 child: Text('잔여횟수'),
@@ -411,7 +410,7 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
               padding: EdgeInsets.only(left: size.width * 0.015),
             ),
             Container(
-                width: 80,
+                width: size.width * 0.2,
                 height: 50,
                 alignment: Alignment.center,
                 child: Text(remain_count),
@@ -440,10 +439,9 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
           FlatButton(
               onPressed: () async {
                 try {
-
                   final doc = pw.Document();
                   print(listNum);
-                  for(int i=0; i<listNum; ++i) {
+                  for (int i = 0; i < listNum; ++i) {
                     var mFuture = await printList(i);
 
                     doc.addPage(pw.MultiPage(
@@ -452,44 +450,45 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
                               .load('fonts/NanumGothic-Regular.ttf'))),
                       pageFormat: PdfPageFormat.a4,
                       build: (pw.Context context) {
-                        return [pw.Column(children: [
-                          pw.Row(children: [
-                            pw.Text(DateTime.now().toString().substring(
-                                0, DateTime.now().toString().indexOf('.')))
-                          ], mainAxisAlignment: pw.MainAxisAlignment.end),
-                          pw.Row(children: [
-                            pw.Text('고객번호 : '),
-                            pw.Text(user_id.toString())
-                          ]),
-                          pw.Padding(
-                              padding: pw.EdgeInsets.symmetric(vertical: 8)),
-                          pw.Row(children: [
-                            pw.Text('입금자 : '),
-                            pw.Text(_nameStream.text.toString())
-                          ]),
-                          pw.Padding(
-                              padding: pw.EdgeInsets.symmetric(vertical: 8)),
-                          pw.Row(children: [
-                            pw.Text('전화번호 : '),
-                            pw.Text(_phoneStream.text.toString())
-                          ]),
-                          pw.Padding(
-                              padding: pw.EdgeInsets.symmetric(vertical: 8)),
-                          pw.Row(children: [
-                            pw.Text('배송 주소 : '),
-                            pw.Text(_addressStream.text.toString())
-                          ]),
-                          pw.Padding(
-                              padding: pw.EdgeInsets.symmetric(vertical: 10)),
-                          pw.Table(
-                            children: mFuture,
-                            border: pw.TableBorder.all(
-                                width: 1, color: PdfColors.black),
-                            defaultVerticalAlignment:
-                            pw.TableCellVerticalAlignment.middle,
-                            defaultColumnWidth: pw.IntrinsicColumnWidth(),
-                          )
-                        ])
+                        return [
+                          pw.Column(children: [
+                            pw.Row(children: [
+                              pw.Text(DateTime.now().toString().substring(
+                                  0, DateTime.now().toString().indexOf('.')))
+                            ], mainAxisAlignment: pw.MainAxisAlignment.end),
+                            pw.Row(children: [
+                              pw.Text('고객번호 : '),
+                              pw.Text(user_id.toString())
+                            ]),
+                            pw.Padding(
+                                padding: pw.EdgeInsets.symmetric(vertical: 8)),
+                            pw.Row(children: [
+                              pw.Text('입금자 : '),
+                              pw.Text(_nameStream.text.toString())
+                            ]),
+                            pw.Padding(
+                                padding: pw.EdgeInsets.symmetric(vertical: 8)),
+                            pw.Row(children: [
+                              pw.Text('전화번호 : '),
+                              pw.Text(_phoneStream.text.toString())
+                            ]),
+                            pw.Padding(
+                                padding: pw.EdgeInsets.symmetric(vertical: 8)),
+                            pw.Row(children: [
+                              pw.Text('배송 주소 : '),
+                              pw.Text(_addressStream.text.toString())
+                            ]),
+                            pw.Padding(
+                                padding: pw.EdgeInsets.symmetric(vertical: 10)),
+                            pw.Table(
+                              children: mFuture,
+                              border: pw.TableBorder.all(
+                                  width: 1, color: PdfColors.black),
+                              defaultVerticalAlignment:
+                                  pw.TableCellVerticalAlignment.middle,
+                              defaultColumnWidth: pw.IntrinsicColumnWidth(),
+                            )
+                          ])
                         ];
                       },
                     ));
@@ -628,7 +627,6 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
             });
           }));
     }
-
   }
 
   void searchOrderList(List<Map> query, int index) async {
@@ -641,7 +639,6 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
   }
 
   void getOrderList(List<Map> query) {
-
     for (int i = 0; i < query.length; ++i) {
       orderList.add(DataRow(cells: [
         DataCell(Text((i + 1).toString())),
@@ -653,18 +650,17 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
     listNum = orderList.length ~/ 11 + 1;
     print(listNum);
     int count = 0;
-    if(orderList.length > 11){
-      for(int i=0; i<listNum; ++i){
+    if (orderList.length > 11) {
+      for (int i = 0; i < listNum; ++i) {
         List<DataRow> tmp = [];
-        for(int j=0; j<11; ++j){
-          if(count >= orderList.length) break;
-          tmp.add(orderList[j + i *11]);
+        for (int j = 0; j < 11; ++j) {
+          if (count >= orderList.length) break;
+          tmp.add(orderList[j + i * 11]);
           count++;
         }
         overflowList.add(tmp);
       }
-    }
-    else {
+    } else {
       List<DataRow> tmp = [];
       for (int i = 0; i < orderList.length; ++i) {
         tmp.add(orderList[i]);
@@ -716,11 +712,12 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
     }
     return list;
   }
-  String getSplitAddress(){
+
+  String getSplitAddress() {
     String result = '';
     String tmp = _addressStream.text.toString();
     var split = tmp.split(' ');
-    for(int i=3; i<split.length; ++i){
+    for (int i = 3; i < split.length; ++i) {
       result += split[i] + ' ';
     }
     return result;
