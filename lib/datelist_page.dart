@@ -307,7 +307,7 @@ class _CurrentDateListPageState extends State<CurrentDateListPage> {
                           );
                         } catch (e) {
                           print(e.toString());
-                          showAlert(context, '에러 발생');
+                          showAlert(context, '에러 발생',pageFinish: false);
                         }
                       },
                       child: Container(
