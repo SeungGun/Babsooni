@@ -146,7 +146,6 @@ class _CheckOrderScheduleState extends State<CheckOrderSchedule>
     // print('CALLBACK: _onCalendarCreated');
   }
 
-  void readDBDate() {}
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
@@ -163,8 +162,9 @@ class _CheckOrderScheduleState extends State<CheckOrderSchedule>
                 fontWeight: FontWeight.bold,
               ),
             ),
+            Padding(padding: EdgeInsets.symmetric(vertical: 10),),
             _buildTableCalendarWithBuilders(),
-            const SizedBox(height: 50.0),
+            const SizedBox(height: 40.0),
             FlatButton(
                 onPressed: () {
                   Navigator.pop(context);

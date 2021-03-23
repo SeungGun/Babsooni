@@ -171,7 +171,7 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
               padding: EdgeInsets.only(left: size.width * 0.015),
             ),
             Container(
-                width: size.width * 0.35,
+                width: size.width * 0.36,
                 height: 70,
                 alignment: Alignment.center,
                 child: Row(
@@ -228,7 +228,7 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
               padding: EdgeInsets.only(left: size.width * 0.01),
             ),
             Container(
-                width: size.width * 0.24,
+                width: size.width * 0.23,
                 height: 70,
                 alignment: Alignment.center,
                 child: Container(
@@ -270,7 +270,7 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
                           decoration: BoxDecoration(
                               border:
                                   Border.all(width: 1, color: Colors.cyan))),
-                      Padding(padding: EdgeInsets.only(right: 5))
+                      Padding(padding: EdgeInsets.only(right: 3))
                     ],
                   ),
                 ),

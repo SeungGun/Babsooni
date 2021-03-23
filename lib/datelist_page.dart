@@ -216,7 +216,7 @@ class _CurrentDateListPageState extends State<CurrentDateListPage> {
                 ),
                 Padding(padding: EdgeInsets.symmetric(vertical: 10)),
                 Row(children: [
-                  Padding(padding: EdgeInsets.symmetric(horizontal: 20)),
+                  Padding(padding: EdgeInsets.symmetric(horizontal: 10)),
                   FlatButton(
                       onPressed: () {
                         Navigator.pop(context);
@@ -323,10 +323,15 @@ class _CurrentDateListPageState extends State<CurrentDateListPage> {
                       )),
                   FlatButton(
                       onPressed: () {
-                        print(menuList.length);
-                        print(menuList[0].split('\n'));
-                        calTotalMenu();
-                        print(menuPair);
+                        try {
+                          print(menuList.length);
+                          print(menuList[0].split('\n'));
+                          calTotalMenu();
+                          print(menuPair);
+                        }
+                        catch(e){
+                          showAlert(context, '에러 발생', pageFinish: false);
+                        }
                       },
                       child: Container(
                         width: 100,
@@ -415,13 +420,13 @@ class _CurrentDateListPageState extends State<CurrentDateListPage> {
     return list;
   }
 
-  void showAlert(BuildContext context, String message) {
+  void showAlert(BuildContext context, String message, {@required bool pageFinish}) {
     showDialog(
         context: context,
         builder: (ctx) {
           Future.delayed(Duration(milliseconds: 800), () {
             Navigator.pop(ctx);
-            Navigator.pop(context);
+            if (pageFinish) Navigator.pop(context);
           });
           return AlertDialog(
             shape: RoundedRectangleBorder(
