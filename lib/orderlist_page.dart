@@ -120,8 +120,8 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
                             onPressed: () async {
                               dataList.clear();
                               List<Map> list = await databaseUser.rawQuery(
-                                  'SELECT * FROM user_info WHERE name = ?',
-                                  [_nameStream.text.toString()]);
+                                  "SELECT * FROM user_info WHERE name LIKE '%${_nameStream.text.toString()}%'",
+                                  );
                               getData(list, context);
                               showSearchList(context);
                             }),
@@ -202,8 +202,8 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
                             onPressed: () async {
                               dataList.clear();
                               List<Map> list = await databaseUser.rawQuery(
-                                  'SELECT * FROM user_info WHERE phone = ?',
-                                  [_phoneStream.text.toString()]);
+                                  "SELECT * FROM user_info WHERE phone LIKE '%${_phoneStream.text.toString()}%'",
+                                  );
                               getData(list, context);
                               showSearchList(context);
                             }),
@@ -262,8 +262,8 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
                               onPressed: () async {
                                 dataList.clear();
                                 List<Map> list = await databaseUser.rawQuery(
-                                    'SELECT * FROM user_info WHERE kakao = ?',
-                                    [_kakaoStream.text.toString()]);
+                                    "SELECT * FROM user_info WHERE kakao LIKE '%${_kakaoStream.text.toString()}%'",
+                                    );
                                 getData(list, context);
                                 showSearchList(context);
                               }),
@@ -314,8 +314,8 @@ class _CheckOrderListPageState extends State<CheckOrderListPage> {
                       onPressed: () async {
                         dataList.clear();
                         List<Map> list = await databaseUser.rawQuery(
-                            'SELECT * FROM user_info WHERE address = ?',
-                            [_addressStream.text.toString()]);
+                            "SELECT * FROM user_info WHERE address LIKE '%${_addressStream.text.toString()}%'",
+                            );
                         getData(list, context);
                         showSearchList(context);
                       },
