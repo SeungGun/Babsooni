@@ -5,7 +5,7 @@ import 'package:babsuni/orderschedule_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-void main() async {
+void main() {
   //List<Map> list = await db.rawQuery('SELECT * FROM test'); // 제네릭 Map 타입의 List 타입이라는 의미는 List의 데이터가 Map이라는 것 구조 -> [{a:b}, {c:d}] (콤마로 각각 리스트의 인덱스 구분)
   // 그리고 각각 List의 원소는 쿼리문 결과의 하나의 행(row)이다.
   runApp(BabsuniApp());
@@ -114,3 +114,4 @@ class Main extends StatelessWidget {
     }));
   }
 }
+

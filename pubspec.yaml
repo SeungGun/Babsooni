@@ -38,11 +38,15 @@ dependencies:
   flutter_material_pickers: ^2.0.0
   file_picker: ^3.0.0
   flutter_datetime_picker: ^1.5.0
+  some_calendar: ^1.2.5
+  intl: ^0.17.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
+dependency_overrides:
+  intl: ^0.17.0-nullsafety.2
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
