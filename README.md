@@ -13,3 +13,5 @@ outsourced flutter project
 6. flutter_material_pickers
 7. file_picker
 8. flutter_datetime_picker
+9. intl
+10. some_calendar
