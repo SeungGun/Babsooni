@@ -1,6 +1,7 @@
 # babsuni
 
 outsourced flutter project
+- 2021/03/09 ~ 2021/03/24, 2021/03/30 ~ 2021/04/03
 
 >  mobile application for management system of users with orders using database
 
