@@ -308,6 +308,7 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                                 width: size.width * 0.4 * 0.5,
                                 height: 60,
                                 child: TextField(
+
                                   controller: _phoneStream,
                                   style: TextStyle(fontSize: 11),
                                   maxLines: 3,
@@ -651,9 +652,9 @@ class _DailyOrderRegisterPageState extends State<DailyOrderRegisterPage> {
                     FlatButton(
                         // 저장 버튼
                         onPressed: () async {
-                          if (_nameStream.text.toString().isEmpty ||
-                              _phoneStream.text.toString().isEmpty ||
-                              _orderContentStream.text.toString().isEmpty ||
+                          if (_nameStream.text.toString().isEmpty &&
+                              _phoneStream.text.toString().isEmpty &&
+                              _orderContentStream.text.toString().isEmpty &&
                               _addressStream.text.toString().isEmpty) {
                             dataStoreDialog(context, '저장 실패! \n 입력을 확인하세요.',
                                 pageFinish: false);

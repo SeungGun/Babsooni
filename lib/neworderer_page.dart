@@ -289,7 +289,7 @@ class _NewOrdererRegisterPageState extends State<NewOrdererRegisterPage> {
                         )),
                     FlatButton(
                         onPressed: () async {
-                          if(_nameStream.text.isEmpty || _cellphoneStream.text.isEmpty || _addressStream.text.isEmpty){
+                          if(_nameStream.text.isEmpty && _cellphoneStream.text.isEmpty && _addressStream.text.isEmpty){
                             dataStoreDialog(context, '저장 실패! \n입력을 확인하세요.');
                           }
                           else {
@@ -298,12 +298,12 @@ class _NewOrdererRegisterPageState extends State<NewOrdererRegisterPage> {
                                 int id = await txn.rawInsert(
                                     'INSERT INTO user_info(name, phone, kakao, address, password, remark, remain) VALUES(?,?,?,?,?,?,?)',
                                     [
-                                      _nameStream.text,
-                                      _cellphoneStream.text,
+                                      _nameStream.text.toString().isEmpty ? '' : _nameStream.text.toString(),
+                                      _cellphoneStream.text.toString().isEmpty ? '' : _cellphoneStream.text.toString(),
                                       _kakaoStream.text.toString().isEmpty ? '' : _kakaoStream.text.toString(),
-                                      _addressStream.text,
+                                      _addressStream.text.toString().isEmpty ? '' : _addressStream.text.toString(),
                                       _passwordStream.text.toString().isEmpty ? '' : _passwordStream.text.toString(),
-                                      _remarkStream.text,
+                                      _remarkStream.text.toString().isEmpty ? '' : _remarkStream.text.toString(),
                                       0
                                     ]
                                 );
